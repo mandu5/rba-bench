@@ -1,0 +1,85 @@
+name: pcgym_cstr_case_study
+adaptation_policy: proposed
+output_dir: results
+tags:
+  - phase-f
+  - pcgym
+  - case-study
+  - planned-after-phase-g
+
+train:
+  algo: sac
+  env_id: PCGym-CSTR-v0
+  seed: 61
+  total_steps: 80000
+  pretrain_steps: 40000
+  device: cpu
+  log_interval: 2000
+  eval_window: 10
+
+drift:
+  shift_type: actuator_gain
+  shift_step: 8000
+  severity: 0.15
+  repeat_interval: 8000
+  repeat_count: 2
+
+budget:
+  window_steps: 1000
+  max_updates_per_window: 500
+  recent_replay_ratio: 0.5
+
+eval:
+  eval_episodes: 3
+  eval_interval_steps: 2000
+  deterministic: true
+  eval_seed_offset: 10000
+
+model:
+  hidden_sizes: [256, 256]
+  gamma: 0.99
+  tau: 0.005
+  actor_lr: 0.0003
+  critic_lr: 0.0003
+  alpha: 0.2
+  autotune: true
+  batch_size: 256
+  buffer_size: 200000
+  recent_buffer_size: 30000
+  learning_starts: 5000
+  policy_frequency: 2
+  target_network_frequency: 1
+
+env_kwargs:
+  env_params:
+    N: 200
+    tsim: 20
+    model: cstr_ode
+    integration_method: casadi
+    normalise_a: true
+    normalise_o: true
+    noise: false
+    noise_percentage: 0.0
+    # PC-Gym normalizes the reset observation before appending setpoints, so x0
+    # includes the initial T setpoint to keep the reset observation shape stable.
+    x0: [0.8, 330.0, 340.0]
+    SP:
+      T:
+        piecewise:
+          - [0, 340.0]
+          - [120, 350.0]
+    r_scale:
+      T: 0.1
+    a_space:
+      low: [250.0]
+      high: [350.0]
+    o_space:
+      low: [0.0, 300.0, 300.0]
+      high: [1.2, 450.0, 380.0]
+    constraints:
+      T: [380.0]
+    cons_type:
+      T: ["<="]
+    r_penalty: true
+    done_on_cons_vio: false
+    near_constraint_margin: 5.0

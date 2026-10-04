@@ -1,0 +1,1 @@
+At 10 seeds, selected replay rankings remain unresolved, coarse paired contrasts survive in 2/5 environments, and metric disagreement needs a pair-specific noise floor with model-dependent inference.

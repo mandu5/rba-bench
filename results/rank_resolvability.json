@@ -1,0 +1,844 @@
+{
+  "seed": 0,
+  "boot": 5000,
+  "envs": {
+    "hopper": {
+      "n_seeds": 10,
+      "n_policies": 8,
+      "return_iqm": {
+        "Budgeted-Grad": {
+          "iqm": 717.2992960611979,
+          "ci": [
+            514.1635589599609,
+            929.6852208455402
+          ]
+        },
+        "Budgeted-Novelty": {
+          "iqm": 697.9279581705729,
+          "ci": [
+            546.6955434163411,
+            854.4530334472656
+          ]
+        },
+        "Budgeted-TD": {
+          "iqm": 681.9727579752604,
+          "ci": [
+            534.0173848470052,
+            842.1945933024086
+          ]
+        },
+        "PER": {
+          "iqm": 641.2160135904948,
+          "ci": [
+            477.84461517333983,
+            801.0643513997396
+          ]
+        },
+        "RecencyWeighted": {
+          "iqm": 802.286142985026,
+          "ci": [
+            608.8509318033854,
+            1080.8739420572913
+          ]
+        },
+        "RecentOnly": {
+          "iqm": 807.8704020182291,
+          "ci": [
+            667.1790181477865,
+            1008.3235778808594
+          ]
+        },
+        "StaticMix": {
+          "iqm": 801.0743509928385,
+          "ci": [
+            613.3384578704834,
+            986.6162719726562
+          ]
+        },
+        "Uniform": {
+          "iqm": 664.931894938151,
+          "ci": [
+            491.7782694498698,
+            850.7453770955402
+          ]
+        }
+      },
+      "order": [
+        "RecentOnly",
+        "RecencyWeighted",
+        "StaticMix",
+        "Budgeted-Grad",
+        "Budgeted-Novelty",
+        "Budgeted-TD",
+        "Uniform",
+        "PER"
+      ],
+      "ordering_resolved": false,
+      "extremes": {
+        "paired_sign_flip_p": 0.015625,
+        "attainable_p_floor": 0.001953125,
+        "omnibus_range_p": 0.2366881655917204,
+        "omnibus_reps": 20000
+      },
+      "adjacent_pairs": {
+        "n_pairs": 7,
+        "n_all_pairs": 28,
+        "p_values": [
+          0.83984375,
+          0.599609375,
+          0.185546875,
+          0.443359375,
+          0.923828125,
+          0.330078125,
+          0.431640625
+        ],
+        "holm_p_values": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "holm_rejections": 0,
+        "exploratory_bh_rejections": 0,
+        "minimum_attainable_p": 0.001953125,
+        "first_holm_cutoff": 0.0017857142857142859,
+        "cannot_reject_at_seed_count": true
+      },
+      "top1": {
+        "policy": "RecentOnly",
+        "prob": 0.4916
+      },
+      "recency_contrast": {
+        "mean": 132.46589294433593,
+        "ci": [
+          52.67214954121908,
+          201.59690927124024
+        ],
+        "sign_consistent": 8,
+        "n_seeds": 10,
+        "resolved": true,
+        "cohen_d_paired": 1.044661087344532,
+        "exact_sign_flip_p": 0.015625,
+        "attainable_p_floor": 0.001953125
+      },
+      "mechanism": {
+        "seed_icc": 0.671132831582092,
+        "policy_share": 0.04368554625578313,
+        "median_pair_cohen_d": 0.40663143008529556,
+        "contrast_over_pair_ratio": 2.5690613416808494
+      },
+      "recentonly_vs_others": {
+        "mean": 117.1975337437221,
+        "cohen_d_paired": 0.6549857545128125,
+        "sign_consistent_positive": 8,
+        "n_seeds": 10,
+        "exact_sign_flip_p": 0.0546875,
+        "rank": 1
+      }
+    },
+    "walker2d": {
+      "n_seeds": 10,
+      "n_policies": 8,
+      "return_iqm": {
+        "Budgeted-Grad": {
+          "iqm": 447.14748128255206,
+          "ci": [
+            413.11488342285156,
+            504.2545979817708
+          ]
+        },
+        "Budgeted-Novelty": {
+          "iqm": 443.7198842366536,
+          "ci": [
+            397.5061464945475,
+            531.2571370442708
+          ]
+        },
+        "Budgeted-TD": {
+          "iqm": 495.9722900390625,
+          "ci": [
+            426.7322998046875,
+            593.4352767944334
+          ]
+        },
+        "PER": {
+          "iqm": 447.219731648763,
+          "ci": [
+            403.0022939046224,
+            508.2677725474039
+          ]
+        },
+        "RecencyWeighted": {
+          "iqm": 464.48729451497394,
+          "ci": [
+            418.7511329650879,
+            655.0415598551432
+          ]
+        },
+        "RecentOnly": {
+          "iqm": 507.2738901774089,
+          "ci": [
+            438.551752726237,
+            612.4838307698568
+          ]
+        },
+        "StaticMix": {
+          "iqm": 461.75092061360675,
+          "ci": [
+            417.2876892089844,
+            546.0440230051676
+          ]
+        },
+        "Uniform": {
+          "iqm": 417.4596201578776,
+          "ci": [
+            385.36567306518555,
+            466.20729064941406
+          ]
+        }
+      },
+      "order": [
+        "RecentOnly",
+        "Budgeted-TD",
+        "RecencyWeighted",
+        "StaticMix",
+        "PER",
+        "Budgeted-Grad",
+        "Budgeted-Novelty",
+        "Uniform"
+      ],
+      "ordering_resolved": false,
+      "extremes": {
+        "paired_sign_flip_p": 0.013671875,
+        "attainable_p_floor": 0.001953125,
+        "omnibus_range_p": 0.04699765011749413,
+        "omnibus_reps": 20000
+      },
+      "adjacent_pairs": {
+        "n_pairs": 7,
+        "n_all_pairs": 28,
+        "p_values": [
+          0.6640625,
+          0.740234375,
+          0.271484375,
+          0.2734375,
+          0.89453125,
+          0.638671875,
+          0.05859375
+        ],
+        "holm_p_values": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "holm_rejections": 0,
+        "exploratory_bh_rejections": 0,
+        "minimum_attainable_p": 0.001953125,
+        "first_holm_cutoff": 0.0017857142857142859,
+        "cannot_reject_at_seed_count": true
+      },
+      "top1": {
+        "policy": "RecentOnly",
+        "prob": 0.4674
+      },
+      "recency_contrast": {
+        "mean": 44.98498962402342,
+        "ci": [
+          9.42218688964843,
+          83.10505909728995
+        ],
+        "sign_consistent": 8,
+        "n_seeds": 10,
+        "resolved": true,
+        "cohen_d_paired": 0.7169949835380814,
+        "exact_sign_flip_p": 0.046875,
+        "attainable_p_floor": 0.001953125
+      },
+      "mechanism": {
+        "seed_icc": 0.6319585798786316,
+        "policy_share": 0.06602399312663902,
+        "median_pair_cohen_d": 0.4857303776158769,
+        "contrast_over_pair_ratio": 1.4761172382450665
+      },
+      "recentonly_vs_others": {
+        "mean": 51.41899370465959,
+        "cohen_d_paired": 0.6190989219442833,
+        "sign_consistent_positive": 7,
+        "n_seeds": 10,
+        "exact_sign_flip_p": 0.08203125,
+        "rank": 1
+      }
+    },
+    "ant": {
+      "n_seeds": 10,
+      "n_policies": 8,
+      "return_iqm": {
+        "Budgeted-Grad": {
+          "iqm": 602.2231852213541,
+          "ci": [
+            532.9954630533854,
+            652.860341389974
+          ]
+        },
+        "Budgeted-Novelty": {
+          "iqm": 568.6837463378906,
+          "ci": [
+            525.3540445963541,
+            641.8940836588541
+          ]
+        },
+        "Budgeted-TD": {
+          "iqm": 566.7932840983073,
+          "ci": [
+            531.6061726888021,
+            625.6204360961914
+          ]
+        },
+        "PER": {
+          "iqm": 538.5789693196615,
+          "ci": [
+            490.5693734486898,
+            595.0577655792237
+          ]
+        },
+        "RecencyWeighted": {
+          "iqm": 649.9041239420573,
+          "ci": [
+            582.2706197102865,
+            747.0089416503906
+          ]
+        },
+        "RecentOnly": {
+          "iqm": 517.3019612630209,
+          "ci": [
+            481.8099472045899,
+            554.159497833252
+          ]
+        },
+        "StaticMix": {
+          "iqm": 633.6315104166666,
+          "ci": [
+            583.0859372456869,
+            700.4649149576823
+          ]
+        },
+        "Uniform": {
+          "iqm": 601.6978759765625,
+          "ci": [
+            554.7765299479166,
+            670.6993909200031
+          ]
+        }
+      },
+      "order": [
+        "RecencyWeighted",
+        "StaticMix",
+        "Budgeted-Grad",
+        "Uniform",
+        "Budgeted-Novelty",
+        "Budgeted-TD",
+        "PER",
+        "RecentOnly"
+      ],
+      "ordering_resolved": true,
+      "extremes": {
+        "paired_sign_flip_p": 0.001953125,
+        "attainable_p_floor": 0.001953125,
+        "omnibus_range_p": 0.005749712514374282,
+        "omnibus_reps": 20000
+      },
+      "adjacent_pairs": {
+        "n_pairs": 7,
+        "n_all_pairs": 28,
+        "p_values": [
+          0.423828125,
+          0.26953125,
+          0.21875,
+          0.283203125,
+          0.833984375,
+          0.103515625,
+          0.296875
+        ],
+        "holm_p_values": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "holm_rejections": 0,
+        "exploratory_bh_rejections": 0,
+        "minimum_attainable_p": 0.001953125,
+        "first_holm_cutoff": 0.0017857142857142859,
+        "cannot_reject_at_seed_count": true
+      },
+      "top1": {
+        "policy": "RecencyWeighted",
+        "prob": 0.6494
+      },
+      "recency_contrast": {
+        "mean": 23.857046508789075,
+        "ci": [
+          -3.015471837361623,
+          46.261904754638664
+        ],
+        "sign_consistent": 8,
+        "n_seeds": 10,
+        "resolved": false,
+        "cohen_d_paired": 0.5647958993207192,
+        "exact_sign_flip_p": 0.109375,
+        "attainable_p_floor": 0.001953125
+      },
+      "mechanism": {
+        "seed_icc": 0.37536228546565314,
+        "policy_share": 0.2035031181285389,
+        "median_pair_cohen_d": 0.6014229871204182,
+        "contrast_over_pair_ratio": 0.9390992885472044
+      },
+      "recentonly_vs_others": {
+        "mean": -86.50483354840961,
+        "cohen_d_paired": -1.280582635902707,
+        "sign_consistent_positive": 0,
+        "n_seeds": 10,
+        "exact_sign_flip_p": 0.001953125,
+        "rank": 8
+      }
+    },
+    "halfcheetah": {
+      "n_seeds": 10,
+      "n_policies": 8,
+      "return_iqm": {
+        "Budgeted-Grad": {
+          "iqm": 3686.7005615234375,
+          "ci": [
+            3349.712687174479,
+            4128.8153889973955
+          ]
+        },
+        "Budgeted-Novelty": {
+          "iqm": 3650.594970703125,
+          "ci": [
+            3356.173095703125,
+            3978.5425130208328
+          ]
+        },
+        "Budgeted-TD": {
+          "iqm": 3342.8240966796875,
+          "ci": [
+            3070.3681681315106,
+            3724.4602864583335
+          ]
+        },
+        "PER": {
+          "iqm": 2949.3639322916665,
+          "ci": [
+            2782.7604685465494,
+            3227.379150390625
+          ]
+        },
+        "RecencyWeighted": {
+          "iqm": 3897.8272298177085,
+          "ci": [
+            3619.880413818359,
+            4392.8675933837885
+          ]
+        },
+        "RecentOnly": {
+          "iqm": 3839.052286783854,
+          "ci": [
+            3565.912464396159,
+            4299.171128336588
+          ]
+        },
+        "StaticMix": {
+          "iqm": 3788.762898763021,
+          "ci": [
+            3508.7539876302085,
+            4158.686983235676
+          ]
+        },
+        "Uniform": {
+          "iqm": 3505.7252604166665,
+          "ci": [
+            3128.8518880208335,
+            3803.515876261393
+          ]
+        }
+      },
+      "order": [
+        "RecencyWeighted",
+        "RecentOnly",
+        "StaticMix",
+        "Budgeted-Grad",
+        "Budgeted-Novelty",
+        "Uniform",
+        "Budgeted-TD",
+        "PER"
+      ],
+      "ordering_resolved": true,
+      "extremes": {
+        "paired_sign_flip_p": 0.001953125,
+        "attainable_p_floor": 0.001953125,
+        "omnibus_range_p": 4.999750012499375e-05,
+        "omnibus_reps": 20000
+      },
+      "adjacent_pairs": {
+        "n_pairs": 7,
+        "n_all_pairs": 28,
+        "p_values": [
+          0.125,
+          0.0546875,
+          0.220703125,
+          0.30859375,
+          0.001953125,
+          0.220703125,
+          0.001953125
+        ],
+        "holm_p_values": [
+          0.5,
+          0.2734375,
+          0.662109375,
+          0.662109375,
+          0.0546875,
+          0.662109375,
+          0.0546875
+        ],
+        "holm_rejections": 0,
+        "exploratory_bh_rejections": 2,
+        "minimum_attainable_p": 0.001953125,
+        "first_holm_cutoff": 0.0017857142857142859,
+        "cannot_reject_at_seed_count": true
+      },
+      "top1": {
+        "policy": "RecencyWeighted",
+        "prob": 0.9436
+      },
+      "recency_contrast": {
+        "mean": 459.17782226562497,
+        "ci": [
+          376.1274328613281,
+          546.0848330078122
+        ],
+        "sign_consistent": 10,
+        "n_seeds": 10,
+        "resolved": true,
+        "cohen_d_paired": 3.1926055352608778,
+        "exact_sign_flip_p": 0.001953125,
+        "attainable_p_floor": 0.001953125
+      },
+      "mechanism": {
+        "seed_icc": 0.7168687873965044,
+        "policy_share": 0.23515197774944951,
+        "median_pair_cohen_d": 1.7557752570039225,
+        "contrast_over_pair_ratio": 1.8183452139021374
+      },
+      "recentonly_vs_others": {
+        "mean": 347.56920340401786,
+        "cohen_d_paired": 2.160036053400678,
+        "sign_consistent_positive": 10,
+        "n_seeds": 10,
+        "exact_sign_flip_p": 0.001953125,
+        "rank": 2
+      }
+    },
+    "pcgym": {
+      "n_seeds": 5,
+      "n_policies": 8,
+      "return_iqm": {
+        "Budgeted-Grad": {
+          "iqm": -871.9005330403646,
+          "ci": [
+            -1543.5517985026042,
+            -456.5599365234375
+          ]
+        },
+        "Budgeted-Novelty": {
+          "iqm": -817.6017252604166,
+          "ci": [
+            -1276.3980305989583,
+            -465.684814453125
+          ]
+        },
+        "Budgeted-TD": {
+          "iqm": -865.3116455078125,
+          "ci": [
+            -1502.1407470703125,
+            -444.42079671223956
+          ]
+        },
+        "PER": {
+          "iqm": -1044.255126953125,
+          "ci": [
+            -1330.4624430338542,
+            -495.95916748046875
+          ]
+        },
+        "RecencyWeighted": {
+          "iqm": -695.4691569010416,
+          "ci": [
+            -1195.8234456380208,
+            -360.03338623046875
+          ]
+        },
+        "RecentOnly": {
+          "iqm": -771.3959350585938,
+          "ci": [
+            -1239.7591959635417,
+            -413.680419921875
+          ]
+        },
+        "StaticMix": {
+          "iqm": -732.570556640625,
+          "ci": [
+            -1385.486572265625,
+            -428.42803955078125
+          ]
+        },
+        "Uniform": {
+          "iqm": -702.4096171061198,
+          "ci": [
+            -1330.2712809244792,
+            -445.3245137532552
+          ]
+        }
+      },
+      "order": [
+        "RecencyWeighted",
+        "Uniform",
+        "StaticMix",
+        "RecentOnly",
+        "Budgeted-Novelty",
+        "Budgeted-TD",
+        "Budgeted-Grad",
+        "PER"
+      ],
+      "ordering_resolved": false,
+      "extremes": {
+        "paired_sign_flip_p": 0.125,
+        "attainable_p_floor": 0.0625,
+        "omnibus_range_p": 0.013249337533123344,
+        "omnibus_reps": 20000
+      },
+      "adjacent_pairs": {
+        "n_pairs": 7,
+        "n_all_pairs": 28,
+        "p_values": [
+          0.375,
+          0.3125,
+          0.75,
+          0.0625,
+          0.625,
+          0.5625,
+          0.9375
+        ],
+        "holm_p_values": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "holm_rejections": 0,
+        "exploratory_bh_rejections": 0,
+        "minimum_attainable_p": 0.0625,
+        "first_holm_cutoff": 0.0017857142857142859,
+        "cannot_reject_at_seed_count": true
+      },
+      "top1": {
+        "policy": "RecencyWeighted",
+        "prob": 0.7556
+      },
+      "recency_contrast": {
+        "mean": 118.66897216796879,
+        "ci": [
+          43.041628824869804,
+          176.22107137044273
+        ],
+        "sign_consistent": 4,
+        "n_seeds": 5,
+        "resolved": true,
+        "cohen_d_paired": 1.3798166101759497,
+        "exact_sign_flip_p": 0.125,
+        "attainable_p_floor": 0.0625
+      },
+      "mechanism": {
+        "seed_icc": 0.9123177220605634,
+        "policy_share": 0.01836457635767454,
+        "median_pair_cohen_d": 0.6419205477787607,
+        "contrast_over_pair_ratio": 2.149513074399211
+      },
+      "recentonly_vs_others": {
+        "mean": 75.22588413783484,
+        "cohen_d_paired": 0.7203648940239283,
+        "sign_consistent_positive": 4,
+        "n_seeds": 5,
+        "exact_sign_flip_p": 0.1875,
+        "rank": 4
+      }
+    }
+  },
+  "budget": {
+    "hopper": {
+      "updates_and_samples_identical": true,
+      "wallclock_spread": 1.3290214384755359,
+      "cheapest": "RecentOnly",
+      "relative_wallclock": {
+        "Budgeted-Grad": 1.3247739254775226,
+        "Budgeted-Novelty": 1.3246449072023945,
+        "Budgeted-TD": 1.3290214384755359,
+        "PER": 1.3213202338014587,
+        "RecencyWeighted": 1.2525440947696502,
+        "RecentOnly": 1.0,
+        "StaticMix": 1.0077597068255175,
+        "Uniform": 1.2185867732485898
+      },
+      "recency_group_mean": 1.0867679338650558,
+      "nonrecency_group_mean": 1.3036694556411001
+    },
+    "walker2d": {
+      "updates_and_samples_identical": true,
+      "wallclock_spread": 1.4482541443176,
+      "cheapest": "RecentOnly",
+      "relative_wallclock": {
+        "Budgeted-Grad": 1.4482541443176,
+        "Budgeted-Novelty": 1.4384973090837498,
+        "Budgeted-TD": 1.4279830674082403,
+        "PER": 1.391601299235575,
+        "RecencyWeighted": 1.347355620517592,
+        "RecentOnly": 1.0,
+        "StaticMix": 1.0083066447870124,
+        "Uniform": 1.3067409288939897
+      },
+      "recency_group_mean": 1.1185540884348681,
+      "nonrecency_group_mean": 1.402615349787831
+    },
+    "ant": {
+      "updates_and_samples_identical": true,
+      "wallclock_spread": 1.3406319410813756,
+      "cheapest": "StaticMix",
+      "relative_wallclock": {
+        "Budgeted-Grad": 1.3381935879256726,
+        "Budgeted-Novelty": 1.3406319410813756,
+        "Budgeted-TD": 1.332476890365527,
+        "PER": 1.3365395448210684,
+        "RecencyWeighted": 1.2690771047454725,
+        "RecentOnly": 1.0002066368564362,
+        "StaticMix": 1.0,
+        "Uniform": 1.2343291276583357
+      },
+      "recency_group_mean": 1.0897612472006362,
+      "nonrecency_group_mean": 1.3164342183703959
+    },
+    "halfcheetah": {
+      "updates_and_samples_identical": true,
+      "wallclock_spread": 1.3938918835407081,
+      "cheapest": "RecentOnly",
+      "relative_wallclock": {
+        "Budgeted-Grad": 1.390578340636539,
+        "Budgeted-Novelty": 1.3938918835407081,
+        "Budgeted-TD": 1.3896832672612878,
+        "PER": 1.3715543061480728,
+        "RecencyWeighted": 1.3099379664018633,
+        "RecentOnly": 1.0,
+        "StaticMix": 1.0041551564438185,
+        "Uniform": 1.2773746887649893
+      },
+      "recency_group_mean": 1.1046977076152273,
+      "nonrecency_group_mean": 1.3646164972703194
+    },
+    "pcgym": {
+      "updates_and_samples_identical": true,
+      "wallclock_spread": 1.2079845066165962,
+      "cheapest": "RecentOnly",
+      "relative_wallclock": {
+        "Budgeted-Grad": 1.1946868311734604,
+        "Budgeted-Novelty": 1.19714921956724,
+        "Budgeted-TD": 1.1873210387707487,
+        "PER": 1.2079845066165962,
+        "RecencyWeighted": 1.1557027947177347,
+        "RecentOnly": 1.0,
+        "StaticMix": 1.0060108804887082,
+        "Uniform": 1.132360670523776
+      },
+      "recency_group_mean": 1.0539045584021478,
+      "nonrecency_group_mean": 1.1839004533303643
+    }
+  },
+  "contrast_multiplicity": {
+    "n_tests": 5,
+    "uncorrected_bootstrap": 4,
+    "bh_survivors": [
+      "halfcheetah",
+      "hopper"
+    ],
+    "holm_survivors": [
+      "halfcheetah"
+    ]
+  },
+  "extremes_multiplicity": {
+    "n_tests": 5,
+    "omnibus_bh_survivors": [
+      "ant",
+      "halfcheetah",
+      "pcgym"
+    ],
+    "paired_bh_survivors": [
+      "ant",
+      "halfcheetah",
+      "hopper",
+      "walker2d"
+    ],
+    "adjacent_separated": 0,
+    "adjacent_total": 35,
+    "adjacent_exploratory_bh": 2,
+    "adjacent_selection_control": "Holm over every policy pair before selection",
+    "orders_fully_resolved": 0
+  },
+  "reversal": {
+    "n_tests": 5,
+    "bh_survivors": [
+      "ant",
+      "halfcheetah"
+    ],
+    "above": [
+      "halfcheetah"
+    ],
+    "below": [
+      "ant"
+    ],
+    "reversal_supported": true
+  },
+  "joint_multiplicity": {
+    "n_tests": 15,
+    "survivors": [
+      "contrast:halfcheetah",
+      "contrast:hopper",
+      "extremes:ant",
+      "extremes:halfcheetah",
+      "extremes:pcgym",
+      "reversal:ant",
+      "reversal:halfcheetah"
+    ],
+    "unchanged_from_per_family": true
+  },
+  "verdict": {
+    "ordering_resolved": 2,
+    "partition_resolved": 4,
+    "n_env": 5,
+    "flip_tally": {
+      "indistinguishable": 29,
+      "below chance": 21
+    }
+  }
+}

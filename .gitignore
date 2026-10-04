@@ -1,0 +1,52 @@
+# This working tree is ~18 GB and almost all of it is derived. What a reader
+# needs to reproduce the paper is about 180 KB of merged per-seed CSVs, so the
+# default is to ignore run outputs and force-add the handful of files the
+# analysis actually reads. See RELEASE.md for that list and the reasoning.
+
+# --- training output, not reproducible input --------------------------------
+RL_checkpoints/
+artifacts/
+*.pt
+*.pth
+*.ckpt
+
+# --- snapshot archives (~640 MB); the working tree is the source of truth ----
+*.zip
+*.tar
+*.tar.gz
+
+# --- generated static site (~28 MB) -----------------------------------------
+site/
+
+# --- run outputs ------------------------------------------------------------
+# Ignored wholesale; the paper's inputs are tracked explicitly with `git add -f`.
+results/
+
+# --- python -----------------------------------------------------------------
+__pycache__/
+*.pyc
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+notebooks/.ipynb_checkpoints/
+.ipynb_checkpoints/
+
+# --- editor and tooling -----------------------------------------------------
+.DS_Store
+.codegraph/
+.omc/
+.vscode/
+.idea/
+
+# --- LaTeX build intermediates (paper/main.pdf is tracked as the deliverable)
+paper/*.aux
+paper/*.log
+paper/*.blg
+paper/*.bbl
+paper/*.out
+paper/*.toc
+paper/*.synctex.gz
+paper/figures/*.png

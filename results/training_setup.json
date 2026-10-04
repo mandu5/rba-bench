@@ -1,0 +1,385 @@
+{
+  "scope": "Declared source configs and observed merged-run seed/budget audit; no new training.",
+  "envs": {
+    "hopper": {
+      "config_path": "configs/train/hopper_v5_v21_main.yaml",
+      "csv_path": "results/merged/20260511T021050Z_hopper_v5_phase_g_10seed_merged/hopper_v5_phase_g_10seed_merged_rows.csv",
+      "row_count": 90,
+      "seeds": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "policies": [
+        "Budgeted-Grad",
+        "Budgeted-Novelty",
+        "Budgeted-TD",
+        "Frozen",
+        "PER",
+        "RecencyWeighted",
+        "RecentOnly",
+        "StaticMix",
+        "Uniform"
+      ],
+      "deploy_steps": 70000,
+      "observed_updates": 35000,
+      "observed_replay_samples": 8960000,
+      "train": {
+        "algo": "sac",
+        "env_id": "Hopper-v5",
+        "seed": 21,
+        "total_steps": 120000,
+        "pretrain_steps": 50000,
+        "device": "cpu",
+        "log_interval": 5000,
+        "eval_window": 10
+      },
+      "model": {
+        "hidden_sizes": [
+          256,
+          256
+        ],
+        "gamma": 0.99,
+        "tau": 0.005,
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0003,
+        "alpha": 0.2,
+        "autotune": true,
+        "batch_size": 256,
+        "buffer_size": 200000,
+        "recent_buffer_size": 30000,
+        "learning_starts": 5000,
+        "policy_frequency": 2,
+        "target_network_frequency": 1
+      },
+      "budget": {
+        "window_steps": 2000,
+        "max_updates_per_window": 1000,
+        "recent_replay_ratio": 0.5
+      },
+      "eval": {
+        "eval_episodes": 3,
+        "eval_interval_steps": 2000,
+        "deterministic": true,
+        "eval_seed_offset": 10000
+      },
+      "drift": {
+        "shift_type": "body_mass",
+        "shift_step": 5000,
+        "severity": 0.25,
+        "repeat_interval": 0,
+        "repeat_count": 1
+      }
+    },
+    "walker2d": {
+      "config_path": "configs/train/walker2d_v5_v21_main.yaml",
+      "csv_path": "results/merged/20260511T021106Z_walker2d_v5_phase_g_10seed_merged/walker2d_v5_phase_g_10seed_merged_rows.csv",
+      "row_count": 90,
+      "seeds": [
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      "policies": [
+        "Budgeted-Grad",
+        "Budgeted-Novelty",
+        "Budgeted-TD",
+        "Frozen",
+        "PER",
+        "RecencyWeighted",
+        "RecentOnly",
+        "StaticMix",
+        "Uniform"
+      ],
+      "deploy_steps": 90000,
+      "observed_updates": 45000,
+      "observed_replay_samples": 11520000,
+      "train": {
+        "algo": "sac",
+        "env_id": "Walker2d-v5",
+        "seed": 31,
+        "total_steps": 150000,
+        "pretrain_steps": 60000,
+        "device": "cpu",
+        "log_interval": 5000,
+        "eval_window": 10
+      },
+      "model": {
+        "hidden_sizes": [
+          256,
+          256
+        ],
+        "gamma": 0.99,
+        "tau": 0.005,
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0003,
+        "alpha": 0.2,
+        "autotune": true,
+        "batch_size": 256,
+        "buffer_size": 250000,
+        "recent_buffer_size": 35000,
+        "learning_starts": 5000,
+        "policy_frequency": 2,
+        "target_network_frequency": 1
+      },
+      "budget": {
+        "window_steps": 2500,
+        "max_updates_per_window": 1250,
+        "recent_replay_ratio": 0.5
+      },
+      "eval": {
+        "eval_episodes": 3,
+        "eval_interval_steps": 2500,
+        "deterministic": true,
+        "eval_seed_offset": 10000
+      },
+      "drift": {
+        "shift_type": "friction",
+        "shift_step": 8000,
+        "severity": 0.15,
+        "repeat_interval": 8000,
+        "repeat_count": 4
+      }
+    },
+    "ant": {
+      "config_path": "configs/train/ant_v5_v21_main.yaml",
+      "csv_path": "results/merged/20260511T021120Z_ant_v5_phase_g_10seed_merged/ant_v5_phase_g_10seed_merged_rows.csv",
+      "row_count": 90,
+      "seeds": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60
+      ],
+      "policies": [
+        "Budgeted-Grad",
+        "Budgeted-Novelty",
+        "Budgeted-TD",
+        "Frozen",
+        "PER",
+        "RecencyWeighted",
+        "RecentOnly",
+        "StaticMix",
+        "Uniform"
+      ],
+      "deploy_steps": 90000,
+      "observed_updates": 45000,
+      "observed_replay_samples": 11520000,
+      "train": {
+        "algo": "sac",
+        "env_id": "Ant-v5",
+        "seed": 51,
+        "total_steps": 150000,
+        "pretrain_steps": 60000,
+        "device": "cpu",
+        "log_interval": 5000,
+        "eval_window": 10
+      },
+      "model": {
+        "hidden_sizes": [
+          256,
+          256
+        ],
+        "gamma": 0.99,
+        "tau": 0.005,
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0003,
+        "alpha": 0.2,
+        "autotune": true,
+        "batch_size": 256,
+        "buffer_size": 250000,
+        "recent_buffer_size": 35000,
+        "learning_starts": 5000,
+        "policy_frequency": 2,
+        "target_network_frequency": 1
+      },
+      "budget": {
+        "window_steps": 2500,
+        "max_updates_per_window": 1250,
+        "recent_replay_ratio": 0.5
+      },
+      "eval": {
+        "eval_episodes": 3,
+        "eval_interval_steps": 2500,
+        "deterministic": true,
+        "eval_seed_offset": 10000
+      },
+      "drift": {
+        "shift_type": "friction",
+        "shift_step": 8000,
+        "severity": 0.15,
+        "repeat_interval": 8000,
+        "repeat_count": 4
+      }
+    },
+    "halfcheetah": {
+      "config_path": "configs/train/halfcheetah_v5_v21_main.yaml",
+      "csv_path": "results/merged/20260511T021205Z_halfcheetah_v5_phase_g_10seed_merged/halfcheetah_v5_phase_g_10seed_merged_rows.csv",
+      "row_count": 90,
+      "seeds": [
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50
+      ],
+      "policies": [
+        "Budgeted-Grad",
+        "Budgeted-Novelty",
+        "Budgeted-TD",
+        "Frozen",
+        "PER",
+        "RecencyWeighted",
+        "RecentOnly",
+        "StaticMix",
+        "Uniform"
+      ],
+      "deploy_steps": 90000,
+      "observed_updates": 45000,
+      "observed_replay_samples": 11520000,
+      "train": {
+        "algo": "sac",
+        "env_id": "HalfCheetah-v5",
+        "seed": 41,
+        "total_steps": 150000,
+        "pretrain_steps": 60000,
+        "device": "cpu",
+        "log_interval": 5000,
+        "eval_window": 10
+      },
+      "model": {
+        "hidden_sizes": [
+          256,
+          256
+        ],
+        "gamma": 0.99,
+        "tau": 0.005,
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0003,
+        "alpha": 0.2,
+        "autotune": true,
+        "batch_size": 256,
+        "buffer_size": 250000,
+        "recent_buffer_size": 35000,
+        "learning_starts": 5000,
+        "policy_frequency": 2,
+        "target_network_frequency": 1
+      },
+      "budget": {
+        "window_steps": 2500,
+        "max_updates_per_window": 1250,
+        "recent_replay_ratio": 0.5
+      },
+      "eval": {
+        "eval_episodes": 3,
+        "eval_interval_steps": 2500,
+        "deterministic": true,
+        "eval_seed_offset": 10000
+      },
+      "drift": {
+        "shift_type": "friction",
+        "shift_step": 8000,
+        "severity": 0.15,
+        "repeat_interval": 8000,
+        "repeat_count": 4
+      }
+    },
+    "pcgym": {
+      "config_path": "configs/train/pcgym_case_study.yaml",
+      "csv_path": "results/merged/20260512T180854Z_pcgym_cstr_case_study_5seed/pcgym_cstr_case_study_5seed_rows.csv",
+      "row_count": 45,
+      "seeds": [
+        61,
+        62,
+        63,
+        64,
+        65
+      ],
+      "policies": [
+        "Budgeted-Grad",
+        "Budgeted-Novelty",
+        "Budgeted-TD",
+        "Frozen",
+        "PER",
+        "RecencyWeighted",
+        "RecentOnly",
+        "StaticMix",
+        "Uniform"
+      ],
+      "deploy_steps": 40000,
+      "observed_updates": 20000,
+      "observed_replay_samples": 5120000,
+      "train": {
+        "algo": "sac",
+        "env_id": "PCGym-CSTR-v0",
+        "seed": 61,
+        "total_steps": 80000,
+        "pretrain_steps": 40000,
+        "device": "cpu",
+        "log_interval": 2000,
+        "eval_window": 10
+      },
+      "model": {
+        "hidden_sizes": [
+          256,
+          256
+        ],
+        "gamma": 0.99,
+        "tau": 0.005,
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0003,
+        "alpha": 0.2,
+        "autotune": true,
+        "batch_size": 256,
+        "buffer_size": 200000,
+        "recent_buffer_size": 30000,
+        "learning_starts": 5000,
+        "policy_frequency": 2,
+        "target_network_frequency": 1
+      },
+      "budget": {
+        "window_steps": 1000,
+        "max_updates_per_window": 500,
+        "recent_replay_ratio": 0.5
+      },
+      "eval": {
+        "eval_episodes": 3,
+        "eval_interval_steps": 2000,
+        "deterministic": true,
+        "eval_seed_offset": 10000
+      },
+      "drift": {
+        "shift_type": "actuator_gain",
+        "shift_step": 8000,
+        "severity": 0.15,
+        "repeat_interval": 8000,
+        "repeat_count": 2
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+name: hopper_v5_pilot
+adaptation_policy: proposed
+output_dir: results/colab
+tags:
+  - pilot
+  - hopper-v5
+  - abrupt-drift
+  - colab
+
+train:
+  algo: sac
+  env_id: Hopper-v5
+  seed: 21
+  total_steps: 90000
+  pretrain_steps: 40000
+  device: cuda
+  log_interval: 5000
+  eval_window: 10
+
+drift:
+  shift_type: body_mass
+  shift_step: 5000
+  severity: 0.25
+  repeat_interval: 0
+  repeat_count: 1
+
+budget:
+  window_steps: 2500
+  max_updates_per_window: 1250
+  recent_replay_ratio: 0.5
+
+eval:
+  eval_episodes: 5
+  eval_interval_steps: 5000
+  deterministic: true
+  eval_seed_offset: 10000
+
+cost:
+  include_update_count: true
+  include_replay_samples: true
+  include_wallclock_update_time: true
+  include_reward_ctrl: true
+  budget_score_update_penalty: 0.05
+
+model:
+  hidden_sizes: [256, 256]
+  gamma: 0.99
+  tau: 0.005
+  actor_lr: 0.0003
+  critic_lr: 0.0003
+  alpha: 0.2
+  autotune: true
+  batch_size: 256
+  buffer_size: 200000
+  recent_buffer_size: 30000
+  learning_starts: 5000
+  policy_frequency: 2
+  target_network_frequency: 1
+
+env_kwargs: {}

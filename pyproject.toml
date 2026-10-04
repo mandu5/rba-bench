@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rba-bench"
+version = "0.1.0"
+description = "RBA-Bench: fixed-budget evaluation tooling for continual RL under non-stationary deployment drift."
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+authors = [
+  { name = "gosmain" }
+]
+dependencies = [
+  "numpy>=1.26,<2",
+  "torch>=2.2",
+  "PyYAML>=6.0",
+  "pandas>=2.2",
+  "plotly>=5.20"
+]
+
+[project.optional-dependencies]
+envs = [
+  "gymnasium>=0.29"
+]
+mujoco = [
+  "gymnasium[mujoco]>=0.29",
+  "mujoco>=3.1"
+]
+pcgym = [
+  "pcgym==0.1.6"
+]
+
+[project.scripts]
+rba-bench = "rba_bench.cli:main"
+rl-research = "rl_research.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

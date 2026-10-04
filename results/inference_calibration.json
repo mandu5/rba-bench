@@ -1,0 +1,302 @@
+{
+  "estimator": "mean_pair_specific_concordant_floor_v2",
+  "split_scheme": "exhaustive_ordered_disjoint_halves",
+  "policies": 8,
+  "seeds": 10,
+  "half_size": 5,
+  "nominal_coverage": 0.95,
+  "nominal_one_sided_alpha": 0.05,
+  "model": "Independent Gaussian observations across policy, metric and seed; policy-specific SDs; IQM half scores.",
+  "coverage_target": "Analytic zero for concordant nulls; separately simulated population excess for reversal.",
+  "scope": "Model calibration only; not a distribution-free validity guarantee or a benchmark-wide exclusion bound.",
+  "cases": [
+    {
+      "name": "homoscedastic_concordant",
+      "is_concordant_null": true,
+      "truth_a": [
+        1.0,
+        0.8571428571428572,
+        0.7142857142857143,
+        0.5714285714285714,
+        0.4285714285714286,
+        0.2857142857142858,
+        0.1428571428571429,
+        0.0
+      ],
+      "truth_b": [
+        1.0,
+        0.8571428571428572,
+        0.7142857142857143,
+        0.5714285714285714,
+        0.4285714285714286,
+        0.2857142857142858,
+        0.1428571428571429,
+        0.0
+      ],
+      "sigma_a": [
+        0.35,
+        0.35,
+        0.35,
+        0.35,
+        0.35,
+        0.35,
+        0.35,
+        0.35
+      ],
+      "sigma_b": [
+        0.35,
+        0.35,
+        0.35,
+        0.35,
+        0.35,
+        0.35,
+        0.35,
+        0.35
+      ],
+      "data_seed": 0,
+      "population_seed": 1000003,
+      "population_target": {
+        "excess": 0.0,
+        "method": "analytic_concordant_null",
+        "draws": 0,
+        "monte_carlo_se": 0.0
+      },
+      "clipped_dataset_fraction": 1.0,
+      "datasets": 400,
+      "population_excess": 0.0,
+      "mean_estimate": -0.010108375795159427,
+      "bias": -0.010108375795159427,
+      "sampling_sd": 0.01980092129147891,
+      "mean_jackknife_se": 0.029744592067955843,
+      "se_over_sampling_sd": 1.5021822282964215,
+      "interval_coverage": 0.9775,
+      "coverage_mc_interval": [
+        0.9577973424412419,
+        0.988118416469505
+      ],
+      "one_sided_rejection_rate": 0.005,
+      "rejection_mc_interval": [
+        0.0013722529547103846,
+        0.018044918436243156
+      ],
+      "covered_count": 391,
+      "rejected_count": 2
+    },
+    {
+      "name": "heteroscedastic_concordant",
+      "is_concordant_null": true,
+      "truth_a": [
+        1.0,
+        0.8571428571428572,
+        0.7142857142857143,
+        0.5714285714285714,
+        0.4285714285714286,
+        0.2857142857142858,
+        0.1428571428571429,
+        0.0
+      ],
+      "truth_b": [
+        1.0,
+        0.8571428571428572,
+        0.7142857142857143,
+        0.5714285714285714,
+        0.4285714285714286,
+        0.2857142857142858,
+        0.1428571428571429,
+        0.0
+      ],
+      "sigma_a": [
+        0.0875,
+        0.12158085575764954,
+        0.16893605127728437,
+        0.23473588208697596,
+        0.3261644505275572,
+        0.45320403443273083,
+        0.6297249638760078,
+        0.875
+      ],
+      "sigma_b": [
+        0.875,
+        0.6297249638760078,
+        0.45320403443273083,
+        0.3261644505275572,
+        0.23473588208697596,
+        0.16893605127728437,
+        0.12158085575764954,
+        0.0875
+      ],
+      "data_seed": 1009,
+      "population_seed": 1001012,
+      "population_target": {
+        "excess": 0.0,
+        "method": "analytic_concordant_null",
+        "draws": 0,
+        "monte_carlo_se": 0.0
+      },
+      "clipped_dataset_fraction": 1.0,
+      "datasets": 400,
+      "population_excess": 0.0,
+      "mean_estimate": -0.00025999152391492555,
+      "bias": -0.00025999152391492555,
+      "sampling_sd": 0.030504163482505807,
+      "mean_jackknife_se": 0.04166937843472549,
+      "se_over_sampling_sd": 1.366022656501397,
+      "interval_coverage": 0.96,
+      "coverage_mc_interval": [
+        0.9360177522821589,
+        0.9752309369302883
+      ],
+      "one_sided_rejection_rate": 0.03,
+      "rejection_mc_interval": [
+        0.017243020965143054,
+        0.05169853570909567
+      ],
+      "covered_count": 384,
+      "rejected_count": 12
+    },
+    {
+      "name": "heteroscedastic_unequal_concordant",
+      "is_concordant_null": true,
+      "truth_a": [
+        1.0,
+        0.8571428571428572,
+        0.7142857142857143,
+        0.5714285714285714,
+        0.4285714285714286,
+        0.2857142857142858,
+        0.1428571428571429,
+        0.0
+      ],
+      "truth_b": [
+        1.0,
+        0.8571428571428572,
+        0.7142857142857143,
+        0.5714285714285714,
+        0.4285714285714286,
+        0.2857142857142858,
+        0.1428571428571429,
+        0.0
+      ],
+      "sigma_a": [
+        0.0875,
+        0.12158085575764954,
+        0.16893605127728437,
+        0.23473588208697596,
+        0.3261644505275572,
+        0.45320403443273083,
+        0.6297249638760078,
+        0.875
+      ],
+      "sigma_b": [
+        2.975,
+        2.1410648771784264,
+        1.5408937170712849,
+        1.1089591317936944,
+        0.7981019990957182,
+        0.5743825743427668,
+        0.4133749095760084,
+        0.2975
+      ],
+      "data_seed": 2018,
+      "population_seed": 1002021,
+      "population_target": {
+        "excess": 0.0,
+        "method": "analytic_concordant_null",
+        "draws": 0,
+        "monte_carlo_se": 0.0
+      },
+      "clipped_dataset_fraction": 1.0,
+      "datasets": 400,
+      "population_excess": 0.0,
+      "mean_estimate": 0.027967161035814793,
+      "bias": 0.027967161035814793,
+      "sampling_sd": 0.07820853339150409,
+      "mean_jackknife_se": 0.08689920141047568,
+      "se_over_sampling_sd": 1.1111217362364663,
+      "interval_coverage": 0.96,
+      "coverage_mc_interval": [
+        0.9360177522821589,
+        0.9752309369302883
+      ],
+      "one_sided_rejection_rate": 0.05,
+      "rejection_mc_interval": [
+        0.03259742983714726,
+        0.07596363506371961
+      ],
+      "covered_count": 384,
+      "rejected_count": 20
+    },
+    {
+      "name": "heteroscedastic_partial_reversal",
+      "is_concordant_null": false,
+      "truth_a": [
+        1.0,
+        0.8571428571428572,
+        0.7142857142857143,
+        0.5714285714285714,
+        0.4285714285714286,
+        0.2857142857142858,
+        0.1428571428571429,
+        0.0
+      ],
+      "truth_b": [
+        0.5714285714285714,
+        0.7142857142857143,
+        0.8571428571428572,
+        1.0,
+        0.4285714285714286,
+        0.2857142857142858,
+        0.1428571428571429,
+        0.0
+      ],
+      "sigma_a": [
+        0.0875,
+        0.12158085575764954,
+        0.16893605127728437,
+        0.23473588208697596,
+        0.3261644505275572,
+        0.45320403443273083,
+        0.6297249638760078,
+        0.875
+      ],
+      "sigma_b": [
+        0.875,
+        0.6297249638760078,
+        0.45320403443273083,
+        0.3261644505275572,
+        0.23473588208697596,
+        0.16893605127728437,
+        0.12158085575764954,
+        0.0875
+      ],
+      "data_seed": 3027,
+      "population_seed": 1003030,
+      "population_target": {
+        "excess": 0.08786510872857144,
+        "method": "independent_population_half_simulation",
+        "draws": 100000,
+        "monte_carlo_se": 0.00027459181548918353
+      },
+      "clipped_dataset_fraction": 1.0,
+      "datasets": 400,
+      "population_excess": 0.08786510872857144,
+      "mean_estimate": 0.08536583443944316,
+      "bias": -0.0024992742891282727,
+      "sampling_sd": 0.055123344552791,
+      "mean_jackknife_se": 0.06041083884071596,
+      "se_over_sampling_sd": 1.0959211443141152,
+      "interval_coverage": 0.93,
+      "coverage_mc_interval": [
+        0.9006910535722495,
+        0.9511283733002555
+      ],
+      "one_sided_rejection_rate": 0.39,
+      "rejection_mc_interval": [
+        0.34346411119977976,
+        0.43862859355376554
+      ],
+      "covered_count": 372,
+      "rejected_count": 156
+    }
+  ]
+}
